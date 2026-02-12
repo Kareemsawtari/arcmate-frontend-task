@@ -48,3 +48,6 @@ npm install
 ## 🌐 Live Demo
 
 https://kareemsawtari.github.io/arcmate-frontend-task/
+
+
+Backend integration could not be validated from the browser due to CORS restrictions (preflight blocked) and/or VPN-gated access. A mock API mode is provided so the deployed demo remains functional.
