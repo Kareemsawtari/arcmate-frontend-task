@@ -1,0 +1,30 @@
+<div class="page">
+  <div class="card">
+    <h1>Add Document</h1>
+
+    <div class="field">
+      <label>Field</label>
+      <input [(ngModel)]="field" placeholder="e.g. DocumentName" />
+    </div>
+
+    <div class="field">
+      <label>Value</label>
+      <input [(ngModel)]="value" placeholder="e.g. Invoice 2026" />
+    </div>
+
+    <label class="checkbox">
+      <input type="checkbox" [(ngModel)]="required" />
+      Required
+    </label>
+
+    <div class="actions">
+      <button class="btn primary" (click)="submit()" [disabled]="saving">
+        {{ saving ? 'Saving…' : 'Submit' }}
+      </button>
+      <button class="btn" (click)="cancel()">Cancel</button>
+    </div>
+
+    <div class="msg error" *ngIf="error">{{ error }}</div>
+    <div class="msg ok" *ngIf="success">{{ success }}</div>
+  </div>
+</div>

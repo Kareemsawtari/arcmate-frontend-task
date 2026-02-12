@@ -1,0 +1,109 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Search Documents</h1>
+
+    <div class="header-actions">
+      <button class="btn secondary" (click)="onLogout()">
+        Logout
+      </button>
+
+      <button class="btn" (click)="goToAdd()">
+        + Add Document
+      </button>
+    </div>
+  </div>
+
+  <!-- Search Card -->
+  <div class="card">
+    <div class="row">
+
+      <!-- Document Type -->
+      <div class="field">
+        <label>Document Type</label>
+        <select [(ngModel)]="docTypeId" [disabled]="loadingTypes">
+          <option value="" disabled>Select type</option>
+          <option *ngFor="let t of docTypes" [value]="t.Id">
+            {{ t.Name }}
+          </option>
+        </select>
+        <div class="hint" *ngIf="loadingTypes">
+          Loading types…
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="field">
+        <label>Text</label>
+        <input
+          [(ngModel)]="text"
+          placeholder="Keyword..."
+        />
+      </div>
+
+      <!-- Amount -->
+      <div class="field">
+        <label>Amount</label>
+        <input
+          type="number"
+          [(ngModel)]="amount"
+          placeholder="e.g. 500"
+        />
+      </div>
+
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button
+        class="btn primary"
+        (click)="search()"
+        [disabled]="loadingSearch"
+      >
+        {{ loadingSearch ? 'Searching…' : 'Search' }}
+      </button>
+
+      <button class="btn" (click)="clear()">
+        Clear
+      </button>
+    </div>
+
+    <!-- Messages -->
+    <div class="msg error" *ngIf="error">
+      {{ error }}
+    </div>
+
+    <div class="msg info" *ngIf="info">
+      {{ info }}
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div class="card" *ngIf="results.length">
+    <h2>Results</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Document ID</th>
+          <th>Title</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let d of results">
+          <td>{{ d.DocumentId }}</td>
+          <td>{{ d.Title }}</td>
+          <td>{{ d.TypeName }}</td>
+          <td>{{ d.Amount }}</td>
+          <td>{{ d.Date || '-' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

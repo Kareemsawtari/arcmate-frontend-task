@@ -1,0 +1,28 @@
+<div class="page">
+  <div class="card">
+    <h2>ARCMATE Login</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <label>
+        Username
+        <input type="text" formControlName="UserName" />
+      </label>
+
+      <label>
+        Password
+        <input type="password" formControlName="Password" />
+      </label>
+
+      <label>
+        IP Address
+        <input type="text" formControlName="IPAddress" />
+      </label>
+
+      <p class="error" *ngIf="errorMsg">{{ errorMsg }}</p>
+
+      <button type="submit" [disabled]="loading">
+        {{ loading ? 'Logging in...' : 'Login' }}
+      </button>
+    </form>
+  </div>
+</div>

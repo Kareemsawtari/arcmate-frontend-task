@@ -1,0 +1,89 @@
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 180px;
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d7d7d7;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #1e66ff;
+  border-color: #1e66ff;
+  color: #fff;
+}
+
+.msg {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.msg.error {
+  background: #ffe9e9;
+  border: 1px solid #ffb3b3;
+}
+
+.msg.info {
+  background: #eef5ff;
+  border: 1px solid #b8d5ff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}

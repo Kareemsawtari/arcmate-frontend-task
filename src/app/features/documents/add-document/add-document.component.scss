@@ -1,0 +1,73 @@
+.page {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.field {
+  margin-top: 12px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d7d7d7;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #1e66ff;
+  border-color: #1e66ff;
+  color: #fff;
+}
+
+.msg {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.msg.error {
+  background: #ffe9e9;
+  border: 1px solid #ffb3b3;
+}
+
+.msg.ok {
+  background: #eaffea;
+  border: 1px solid #b7ffb7;
+}
